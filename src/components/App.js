@@ -8,7 +8,8 @@ import {
   Route,
   Redirect
 } from 'react-router-dom';
-import { HashRouter } from 'react-router-dom';
+
+import Asset from '../pages/Asset';
 import Substation from '../pages/Substation';
 import Dashboard from '../pages/Dashboard';
 
@@ -18,11 +19,14 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact render={() => <Redirect to="/dashboard"/>}/>
-        <Route path="/substation/:substation" >
-          <Substation />
+        <Route path="/:substation/:asset">
+          <Asset />
         </Route>
         <Route path="/dashboard">
           <Dashboard />
+        </Route>
+        <Route path="/:substation">
+          <Substation />
         </Route>
       </Switch>
     </Router>
