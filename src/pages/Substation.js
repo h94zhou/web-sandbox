@@ -1,26 +1,18 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-
-// class Substation extends React.Component {
-//     componentDidMount() {
-//         let { substation } = useParams();
-//     }
-
-//     render() {
-//         return (
-//             <div>
-//                 <h2>Welcome to { substation }</h2>
-//             </div>
-//         )
-//     }
-// }
+import {
+  useParams,
+  Link
+    } from 'react-router-dom';
 
 function Substation() {
     let { substation } = useParams();
-
+    const url = "/" + substation + "/asset1";
     return (
         <div>
             <h2>Welcome to { substation }</h2>
+            <Link to={ url } >Asset 1 </Link>
+
+
         </div>
     );
 }
