@@ -12,17 +12,19 @@ import {
     LineChart,
     Line
 } from "recharts";
+
 import io from "socket.io-client";
 const ENDPOINT = "localhost:4000/";
 const socket = io(ENDPOINT);
+const id = "H-score_Asset";
 
 const arr = new Array(20).fill({ score: Math.random() * 100 });
 
 const StationGraph = ({}) => {
 	const [data, setData] = useState([]);
 	useEffect(() => {
-		socket.emit("request", "Asset_Basic_PVolt_P1");
-		socket.on("Asset_Basic_PVolt_P1", (newVal) => {
+		socket.emit("request", id);
+		socket.on(id, (newVal) => {
 			console.log("First response");
 			console.log(newVal);
 			newVal.forEach(element => {

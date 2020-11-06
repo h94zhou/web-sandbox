@@ -20,10 +20,6 @@ function Substation() {
                 <h4>Graph</h4>
                 <StationGraph />
             </div>
-            <div>
-            <h4>Graph</h4>
-                <StationGraph />
-            </div>
         </div>
     );
 }
