@@ -18,7 +18,7 @@ const socket = io(ENDPOINT);
 
 const arr = new Array(20).fill({ score: Math.random() * 100 });
 
-const StationGraph = ({}) => {
+const StationGraph2 = ({}) => {
 	const [data, setData] = useState([]);
 	useEffect(() => {
 		socket.emit("request", "H-score_Asset");
@@ -59,4 +59,4 @@ const StationGraph = ({}) => {
 	);
 };
 
-export { StationGraph };
+export { StationGraph2 };

@@ -3,8 +3,12 @@ import {
   useParams,
   Link
     } from 'react-router-dom';
+import { button1 } from '../components/SwitchButtons';
 
 import { StationGraph } from './../components/StationGraph';
+import { Button0 } from './../components/SwitchButtons';
+import { Button1 } from './../components/SwitchButtons1';
+import { StationGraph2 } from './../components/StationGraph2';
 
 function Substation() {
     let { substation } = useParams();
@@ -17,13 +21,22 @@ function Substation() {
     
             </div>
             <div>
+                <h4>Buttons</h4>
+                <Button0 />
+                <Button1 />
+            </div>
+            <div>
                 <h4>Graph</h4>
                 <StationGraph />
             </div>
-            <div>
-            <h4>Graph</h4>
-                <StationGraph />
-            </div>
+            {/* <div>
+                <h4>Graph</h4>
+                <StationGraph2 />
+            </div> */}
+          
+            
+            
+            
         </div>
     );
 }
