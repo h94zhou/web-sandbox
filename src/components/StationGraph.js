@@ -12,9 +12,11 @@ import {
     LineChart,
     Line
 } from "recharts";
+
 import io from "socket.io-client";
 const ENDPOINT = "localhost:4000/";
 const socket = io(ENDPOINT);
+const id = "H-score_Asset";
 
 const arr = new Array(20).fill({ score: Math.random() * 100 });
 
